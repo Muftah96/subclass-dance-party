@@ -15,10 +15,12 @@ $(document).ready(function() {
      * A new object of the given type will be created and added
      * to the stage.
      */
+     
     var dancerMakerFunctionName = $(this).data('dancer-maker-function-name');
 
     // get the maker function for the kind of dancer we're supposed to make
     var dancerMakerFunction = window[dancerMakerFunctionName];
+    console.log(dancerMakerFunction)
 
     // make a dancer with a random position
 
@@ -27,8 +29,29 @@ $(document).ready(function() {
       $("body").width() * Math.random(),
       Math.random() * 1000
     );
-    console.log(dancerMakerFunction)
     $('body').append(dancer.$node);
   });
+
+$('.addBananaDancerButton').on('click',function(event){
+
+var bananadancermakerfunctionname = $(this).data('banana-dancer-maker-function-name');
+
+var bananadancermakerfunction = window[bananadancermakerfunctionname];
+
+var bananadancer = new bananadancermakerfunction(
+      Math.floor($("body").height() * Math.random()),
+      Math.floor($("body").width() * Math.random()),
+      Math.random() * 1000
+    );
+
+    $('body').append(bananadancer.$node);
+  });
+
 });
+
+
+
+
+
+
 

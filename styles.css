@@ -1,15 +1,24 @@
+*{
+  margin :0;
+  padding: 0;
+  box-sizing: border-box;
+}
 body, html{
-  height:100%;
+  height:100vh;
+  width: 100vw;
 }
 body{
   margin: 0px;
-  background-color:#444;
+/*  background-color:#444;*/
   font-size: 18px;
+  background-image: url(https://i.pinimg.com/originals/b1/da/c0/b1dac0470bdf2f7cc0c559599fba19f9.jpg) ;
+ background-repeat: no-repeat; 
+  background-size: 100%;
 }
 body, a:link, a:visited, a:active{
   color: lightblue;
 }
-.title, .addDancerButton{
+.title, .addDancerButton, .addBananaDancerButton{
   padding:5px 12px;
   float:right;
 }
@@ -24,4 +33,20 @@ body, a:link, a:visited, a:active{
   border:10px solid red;
   border-radius:10px;
   position:absolute;
+}
+.banana{
+  position: absolute;
+  width: 150px;
+}
+.banana_dancer{
+  position: absolute;
+}
+#disco{
+  position: relative;
+}
+#discoBall{
+  width: 10%;
+  position: absolute;
+  top: 0;
+  left:45%;
 }
