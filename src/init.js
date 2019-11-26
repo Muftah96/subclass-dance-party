@@ -47,6 +47,22 @@ var bananadancer = new bananadancermakerfunction(
     $('body').append(bananadancer.$node);
   });
 
+
+$('.addRoboDancerButton').on('click',function(event){
+
+var Robodancermakerfunctionname = 'RoboDancer';
+console.log(Robodancermakerfunctionname)
+var Robodancermakerfunction = window[Robodancermakerfunctionname];
+console.log(Robodancermakerfunction)
+var robodancer = new Robodancermakerfunction(
+      Math.floor($("body").height() * Math.random()),
+      Math.floor($("body").width() * Math.random()),
+      Math.random() * 1000
+    );
+
+    $('body').append(robodancer.$node);
+  });
+
 });
 
 
